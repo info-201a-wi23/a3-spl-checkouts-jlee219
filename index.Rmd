@@ -48,6 +48,13 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 Here's an example of how to run an R script inside an RMarkdown file:
 
 ``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+
+#Load packages
+library("dplyr")
+library("ggplot2")
+
+spl_df -> read.csv("2017-2023-10-Checkouts-SPL-Data.csv", stringsAsFactors = FALSE)
+
 ```
 
 ### Second Trends Over Time Chart
