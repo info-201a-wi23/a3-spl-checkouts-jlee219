@@ -80,7 +80,7 @@ data%>%
 From the above output, it can be seen that Arthur A. Levine Books has highest average checkouts (26.23), followed by Scholastic (25.63),, and Arthur A. Levine Books, an imprint of Scholastic Inc., (20.63). The Huang guan wen hua chu ban you xian gong si has average checkout value of 1.078947 followed by Nhà xuất bản Trẻ with average checkouts (1.09).
 
 ### Data
-The data was collected and published by the Seattle Public Library. The dataset contains information on the checkout history of books related to Harry Potter written by J.K. Rowling. The parameters of the data include the checkout date, checkout type (Horizon or Drive), material type (book or ebook), usage class (digital or physical), title, ISBN, creator, subjects, publisher, and publication year. The data spans from 2012 to 2022. The data was collected automatically by the library's checkout system whenever a user checked out a Harry Potter book. The data was collected to track the usage and popularity of Harry Potter books in the Seattle Public Library, to inform collection management decisions, and to provide insights into reading preferences.When working with this data, it is important to consider ethical questions related to user privacy and data protection. The dataset includes information about the titles that users have checked out, which could potentially reveal sensitive information about their interests or beliefs. To address this, the library likely took steps to anonymize the data, such as removing user identifiers or aggregating data at the level of the book rather than the individual user. There are several limitations or problems with this data that should be considered. Firstly, the dataset only includes information on Harry Potter books written by J.K. Rowling, so it may not be representative of the popularity of other books or authors in the library's collection. Additionally, the dataset is limited to books checked out from the Seattle Public Library, which may not be representative of the reading habits of the broader population. The data is also limited to the time period from 2012 to 2022, so it does not provide a comprehensive view of the popularity of Harry Potter books over time. Finally, there may be biases in the data collection process, such as differences in checkout practices between different library branches or changes in the checkout system over time, which could affect the accuracy of the data. Overall, these limitations should be taken into account when interpreting the results of any analysis conducted using this data.
+The data was collected and published by the Seattle Public Library. The dataset contains information on the checkout history of books related to Harry Potter written by J.K. Rowling. The parameters of the data include the checkout date, checkout type (Horizon or Drive), material type (book or ebook), usage class (digital or physical), title, ISBN, creator, subjects, publisher, and publication year. The data spans from 2012 to 2022. The data was collected automatically by the library's checkout system whenever a user checked out a Harry Potter book. The data was collected to track the usage and popularity of Harry Potter books in the Seattle Public Library, to inform collection management decisions, and to provide insights into reading preferences. When working with this data, it is important to consider ethical questions related to user privacy and data protection. The dataset includes information about the titles that users have checked out, which could potentially reveal sensitive information about their interests or beliefs. To address this, the library likely took steps to anonymize the data, such as removing user identifiers or aggregating data at the level of the book rather than the individual user. There are several limitations or problems with this data that should be considered. Firstly, the dataset only includes information on Harry Potter books written by J.K. Rowling, so it may not be representative of the popularity of other books or authors in the library's collection. Additionally, the dataset is limited to books checked out from the Seattle Public Library, which may not be representative of the reading habits of the broader population. The data is also limited to the time period from 2012 to 2022, so it does not provide a comprehensive view of the popularity of Harry Potter books over time. Finally, there may be biases in the data collection process, such as differences in checkout practices between different library branches or changes in the checkout system over time, which could affect the accuracy of the data. Overall, these limitations should be taken into account when interpreting the results of any analysis conducted using this data.
 
 
 
@@ -88,7 +88,7 @@ The data was collected and published by the Seattle Public Library. The dataset 
 
 #### Number of Checkouts by Material Type for each Year
 
-For first plot, the total number of checkouts will be visualized for each year with different lines for material type.
+For the first plot, the total number of checkouts will be visualized for each year with different lines for material type.
 
 ```{r, warning=FALSE, message=FALSE}
 # Create a new column for year
@@ -109,7 +109,7 @@ ggplot(data_agg, aes(x = CheckoutYear, y = Checkouts, color = MaterialType)) +
 
 It is clear from the above plot that the total number of checkouts for the book material type initially increased from the years 2012 to 2013, then decreased in the following year, 2014. It then had a rising tendency, reaching its peak value in the year 2017, and then dropping to a lower value in the year 2020. The years 2021 and 2022 saw a subsequent uptick, nevertheless. The lowest total checkout for ebook material type was recorded in the year 2012, while the greatest total checkout was recorded in the year 2017. On the other hand, the overall trend for total checkouts of ebook material type showed continuous growth. In particular, the plot leaves out crucial details about ebook checkouts. The book material type has higher number of checkouts as compare to the ebook material type.
 
-For second plot, the total number of checkouts for some of the publisher will be visualized for each year.
+For the second plot, the total number of checkouts for some of the publisher will be visualized for each year.
 
 #### Number of Checkouts by Publisher for each Year
 
@@ -140,7 +140,7 @@ From the above plot, it can be seen that for publisher Arthur A. Levine Books, h
 #### Distribution of Checkout by Year
 
 
-For this plot, I will use bar plot to visualize the distribution of number of checkouts for each year. The reason for this plot is to identify for which year the number of checkouts are highest and for which year the number of checkouts are lowest.
+For this plot, I will use a bar plot to visualize the distribution of number of checkouts for each year. The reason for this plot is to identify for which year the number of checkouts are highest and for which year the number of checkouts are lowest.
 ```{r}
 #distribution of checkout by year
 data$CheckoutYear <- as.factor(data$CheckoutYear)
